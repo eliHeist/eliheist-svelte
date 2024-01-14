@@ -8,8 +8,8 @@
     <!-- banner -->
     <section id="banner" class="h-screen w-screen grid place-content-center text-center">
         <div class="">
-            <h2 class="font-semibold text-primary-500 text-6xl">Hi, I'm Elijah</h2>
-            <h3 class="font-bold text-7xl">I make Web Applications</h3>
+            <h2 class="font-semibold text-primary-500 text-3xl sm:text-6xl mb-8">Hi, I'm Elijah</h2>
+            <h3 class="font-bold text-5xl sm:text-7xl">I make Web Applications</h3>
         </div>
     </section>
 
