@@ -1,23 +1,19 @@
+<script>
+
+    import Nav from "$lib/nav.svelte";
+
+</script>
 
 <main>
     <!-- banner -->
-    <section id="banner" class="py-12">
-        <div class="container mx-auto px-2">
-            <div class="grid gap-8 sm:grid-cols-3">
-                <div class=" sm:col-span-1">
-                    <img src="" alt="me">
-                </div>
-                <div class="sm:col-span-2 grid content-center">
-                    <h2 class="font-semibold text-primary-500">Hi, I'm Elijah</h2>
-                    <h3 class="text-5xl font-light">I make great Web Applications</h3>
-                    <p class=" font-light text-red-100 text-lg py-4">
-                        With expertise in Tailwind CSS, Django, and SvelteKit, I bring creative designs to life and build seamless user experiences that are both visually appealing and highly functional.
-                    </p>
-                    <a href="" class="px-4 py-2 bg-primary-500 rounded-lg w-fit">View my Projects</a>
-                </div>
-            </div>
+    <section id="banner" class="h-screen w-screen grid place-content-center text-center">
+        <div class="">
+            <h2 class="font-semibold text-primary-500 text-6xl">Hi, I'm Elijah</h2>
+            <h3 class="font-bold text-7xl">I make Web Applications</h3>
         </div>
     </section>
+
+    <Nav/>
 
     <!-- service cards -->
     <section id="service-cards" class="py-12">

@@ -1,4 +1,4 @@
-<nav id="main-nav">
+<nav id="main-nav" class="sticky top-0 w-screen">
     <div class="container mx-auto">
         <div class="flex justify-center sm:justify-between py-1">
             <a class="font-bold text-primary-500 p-1 text-2xl" href="./">eliHeist</a>
