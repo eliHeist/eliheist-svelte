@@ -1,5 +1,5 @@
 {
-	"name": "stst",
+	"name": "eliheist",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
@@ -15,6 +15,7 @@
 		"@types/node": "^20.10.0",
 		"autoprefixer": "^10.4.14",
 		"postcss": "^8.4.27",
+		"postcss-nesting": "^12.1.0",
 		"sass": "^1.64.0",
 		"svelte": "^4.0.5",
 		"svelte-check": "^3.4.3",
