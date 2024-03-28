@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    %sveltekit.head%
+    <script src="https://kit.fontawesome.com/ad090e7425.js" crossorigin="anonymous"></script>
+</head>
+
+<body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
+    <script>
+        const elements = document.querySelectorAll(".mouse_rotate");
+
+        document.addEventListener("mousemove", (event) => {
+            elements_in_view = [...elements].filter((element) => {
+                const rect = element.getBoundingClientRect();
+
+                return (
+                    rect.top <= window.innerHeight &&
+                    rect.bottom >= 0 &&
+                    rect.left <= window.innerWidth &&
+                    rect.right >= 0
+                );
+            });
+
+            elements_in_view.forEach((element) => {
+                const mouseX = event.clientX;
+                const mouseY = event.clientY;
+
+                const rect = element.getBoundingClientRect();
+                const elemCenterX = rect.left + rect.width / 2;
+                const elemCenterY = rect.top + rect.height / 2;
+
+                const angle = Math.atan2(mouseY - elemCenterY, mouseX - elemCenterX);
+                const degree = angle * ((180 / Math.PI) / 180);
+
+                element.style.transform = `rotate(${degree}deg)`;
+            })
+        });
+    </script>
+</body>
+
 </html>

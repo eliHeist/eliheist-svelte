@@ -1,4 +1,29 @@
-<header class="page_header z-50">
+<script lang="ts">
+    import { onMount } from "svelte";
+
+    let isScrolled = false;
+
+    onMount(() => {
+        const element = document.getElementById("page_header") as HTMLElement;
+        const height = element.offsetHeight;
+        let previous_scroll_y = window.scrollY;
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > previous_scroll_y) {
+                isScrolled = true;
+                element.style.transition = "top 0.5s";
+                element.style.top = `-${height}px`;
+            } else if (window.scrollY < previous_scroll_y) {
+                isScrolled = false;
+                element.style.transition = "top 0.5s";
+                element.style.top = "0";
+            }
+            previous_scroll_y = window.scrollY;
+        });
+    });
+</script>
+
+<header id="page_header" class="page_header z-50">
     <nav class="main_nav">
         <menu>
             <a href="/" class="menu_item">
@@ -17,18 +42,6 @@
     </nav>
 </header>
 
-<button
-    title="Menu button"
-    class="hamburger-btn grid grid-flow-col sm:hidden z-50"
-    aria-expanded="false">
-    <!-- <svg class="hamburger w-10" fill="none" viewbox="-10 -10 120 120">
-        <path class="line" d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70"></path>
-    </svg> -->
-    <div class="text-primary-500 h-full grid content-center pr-2 text-sm">
-        <span>Menu</span>
-    </div>
-</button>
-
 <style lang="postcss">
     .page_header {
         position: fixed;
@@ -36,6 +49,19 @@
         right: 0;
         top: 0;
         color: var(--dark);
+
+        background-color: rgba(
+            255,
+            255,
+            255,
+            0.1
+        ); /* Semi-transparent white color */
+        backdrop-filter: blur(10px); /* Apply blur effect */
+
+        @media screen and (max-width: 640px) {
+            top: 100%;
+        }
+
         .main_nav {
             display: flex;
             justify-content: center;
@@ -54,6 +80,9 @@
                     &:hover:not(.active) {
                         background-color: var(--grey-600);
                         color: var(--white);
+                    }
+                    &:not(.active) {
+                        color: var(--grey-200);
                     }
                 }
             }
