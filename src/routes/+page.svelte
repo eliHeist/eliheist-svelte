@@ -121,25 +121,6 @@
             </figure>
         </div>
     </section>
-    <!-- featured projects -->
-    <section id="featured-projects" class="py-12">
-        <div class="container mx-auto px-2">
-            <header class="section-header">
-                <h2>My Projects.</h2>
-            </header>
-            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                <article class="project-card">
-                    <figure class="img-control">
-                        <img class="img-fluid" src="" alt="" />
-                    </figure>
-                    <div class="info">
-                        <h3>Title</h3>
-                        <a href="/"><i class="fas fa-eye"></i> Know more</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
 </main>
 
 <style lang="postcss">
