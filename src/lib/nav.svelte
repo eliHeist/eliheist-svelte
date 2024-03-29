@@ -29,13 +29,13 @@
             <a href="/" class="menu_item">
                 <span class="active">Home</span>
             </a>
-            <a href="/about" class="menu_item">
-                <span>About</span>
+            <a href="#skills" class="menu_item">
+                <span>Skills</span>
             </a>
-            <a href="/portfolio" class="menu_item">
+            <!-- <a href="/portfolio" class="menu_item">
                 <span>Portfolio</span>
-            </a>
-            <a href="/contact" class="menu_item">
+            </a> -->
+            <a href="#future_driven" class="menu_item">
                 <span>Contact</span>
             </a>
         </menu>

@@ -96,7 +96,7 @@
         </div>
     </section>
     <!-- future driven -->
-    <section class="future_driven">
+    <section class="future_driven" id="future_driven">
         <div class="container">
             <div class="call_to_action">
                 <h2>Get in touch.</h2>
